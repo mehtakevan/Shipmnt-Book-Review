@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes")
 const reviewRoutes = require("./routes/reviewRoutes")
 const bookRoutes = require("./routes/bookRoutes")
+const cronJobs = require("./cron-jobs/my-cron-jobs");
 
 dotenv.config({path:"./.env"});
 
