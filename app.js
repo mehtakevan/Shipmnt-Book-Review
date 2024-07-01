@@ -3,6 +3,7 @@ const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes")
 const reviewRoutes = require("./routes/reviewRoutes")
+const bookRoutes = require("./routes/bookRoutes")
 
 dotenv.config({path:"./.env"});
 
@@ -11,7 +12,8 @@ const app = express();
 app.use(express.json())
 
 app.use("/api/user",userRoutes)
-app.use("/api/review",reviewRoutes)
+app.use("/api",reviewRoutes)
+app.use("/api/book",bookRoutes)
 
 const PORT = process.env.PORT || 5000
 
