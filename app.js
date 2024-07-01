@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.use("/api/user",userRoutes)
 app.use("/api",reviewRoutes)
-app.use("/api/book",bookRoutes)
+app.use("/api/books",bookRoutes)
 
 const PORT = process.env.PORT || 5000
 
